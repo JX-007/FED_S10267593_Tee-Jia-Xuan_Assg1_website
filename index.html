@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Info Site</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Logo -->
+    <!-- Logo Section -->
     <div class="logo-container">
-        <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo">
+        <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" width: 300px, height: auto>
     </div>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="login.html">Login</a></li>
-                <!--Search Bar-->
-                <li class="search-bar">
-                    <form>
-                      <input type="text" placeholder="Search...">
-                      <button type="submit">Search</button>
-                    </form>
-                  </li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar Section -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us </a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="search-bar">
+        <li>
+            <form>
+                <input type="text" placeholder="Search...">
+                <button>🔍</button>
+            </form>
+        </li>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main>
         <!--Welcome description-->
-        <section class="hero">
-            <h1>Welcome to the GameRadar</h1>
-            <p>Find all the latest game updates, trailers, and info right here! 
-            Lorem ipsum dolor sit amet. Vel deserunt nesciunt quo dolorem 
-            porro et doloremque blanditiis aut sequi nostrum ut eius obcaecati
-            qui unde officia et architecto eligendi. Et delectus quasi qui autem
-            quia et placeat maiores. Sed eligendi rerum nam facilis blanditiis.</p>
+        <section class="welcome-container">
+            <div>
+                <h1>Welcome to GameRadar+</h1>
+                <p>Welcome to GamesRadar+! We are the games, movies, TV, and comics website that upgrades your downtime;
+                helping you spend your free time wisely. On GamesRadar+ we always aim to inform, entertain, and inspire 
+                through our mix of news, reviews, features, tips, buying guides, and videos. We are not condescending, 
+                elitist, assumptive, or deliberately argumentative. We are a celebratory site that reminds readers that 
+                games and entertainment are a force for good and for bringing people together. We're that voice of your 
+                pal bringing you cool tidbits of game trivia, awesome secrets to find, hidden gems, behind-the-scenes 
+                details, and more as we guide you to the best things to be watching, playing, and reading.
+                GamesRadar+ is also home to some of the biggest brands in the industry: Edge, Retro Gamer, Newsarama, and SFX.</p>
+            </div>
         </section>
 
         <!-- Trending Game Section -->

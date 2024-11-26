@@ -1,158 +1,97 @@
 /* General Styles */
-body {
+* {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
 }
 
+h1 {
+    text-align: center;
+}
+
 .logo-container {
     width: 100%;
     height: 80px;
-    background-color: #4CAF50;
-    padding: 20px;
+    background-color: #232128;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
 }
 
-.logo-container img {
-    max-width: 100%;
-    height: auto;
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Center items vertically */
+    background-color: #868d94;
+    padding: 0 20px; /* Add some padding to the sides */
+    height: 60px; /* Set height for the navbar */
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-}
-  
-nav ul {
+.navbar ul {
     list-style-type: none;
+    display: flex; /* Use flexbox for the list items */
     margin: 0;
     padding: 0;
-    display: flex;
 }
 
-nav ul li {
-    margin-right: 20px;
+.navbar li {
+    float: left;
+    margin-right: 15px; /* Space out the list items */
 }
 
-nav ul li a {
-    color: white;
+.navbar a {
+    color: black;
     text-decoration: none;
-    padding: 10px;
-}
-
-nav ul li.search-bar {
-    margin-left: auto;
-}
-
-nav ul li.search-bar form {
-    display: flex;
-}
-
-nav ul li.search-bar input[type="text"] {
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-}
-
-nav ul li.search-bar button {
-    padding: 5px 10px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-nav ul li.search-bar button:hover {
-    background-color: #45a049;
-}
-
-form {
-    display: flex;
-    align-items: center;
-}
-  
-input[type="text"] {
-padding: 10px;
-font-size: 16px;
-border: 1px solid #ccc;
-border-radius: 4px;
-margin-right: 10px;
-}
-
-button {
-padding: 10px 20px;
-font-size: 16px;
-background-color: #4CAF50;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-}
-
-button:hover {
-background-color: #45a049;
-}
-
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-  }
-
-.slideshow {
-position: relative;
-}
-
-.slide {
-width: 100%;
-display: none;
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding: 15px;
+    display: block;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    transition: background 0.3s;
 }
 
-.slideshow-container:hover .title-overlay {
-    background: rgba(0, 0, 0, 0);
+.navbar a:hover {
+    background-color: #43404d;
 }
 
-/* Mobile-first Styles */
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+.search-bar li {
+    display: flex;
+    align-items: center; /* Center search bar vertically */
+    float: right;
+}
 
-    nav ul li {
-        margin: 10px 0;
-    }
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;  /* Fixed width of the search bar */
+}
 
-    .hero {
-        padding: 50px 20px;
-    }
+.search-bar button{
+    border: 1px solid black;
+}
 
-    .featured-game {
-        flex-direction: column;
-        text-align: center;
-    }
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black ;
+    max-width: fit-content;
+    height: 400px;
+    padding-left: 10px auto;
+}
 
-    .featured-game .game-info {
-        flex-direction: column;
-    }
+.welcome-container div {
+    padding: 50px;
+}
+
+.welcome-container h1 {
+    padding-bottom: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.welcome-container p {
+    font-size: 20px;
 }
