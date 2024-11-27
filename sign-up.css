@@ -1,3 +1,4 @@
+
 /* Basic reset */
 * {
     font-family: Arial, sans-serif;
@@ -81,7 +82,7 @@ body {
     background-color: white;
 }
 
-.login-container {
+.signup-container {
     width: 100%;
     height: calc(100vh - 140px); /* Full height minus navbar and logo */
     display: flex;
@@ -90,7 +91,7 @@ body {
     background-color: white;
 }
 
-.login-box {
+.signup-box {
     width: 300px;
     padding: 30px;
     border: 1px solid #ccc;
@@ -130,12 +131,12 @@ h2 {
 }
 
 /* Input focus */
-.login-box form {
+.signup-box form {
     background-color: white;
 }
 
 /* Submit button */
-.login-box button {
+.signup-box button {
     width: 100%;
     padding: 10px;
     background-color: #f26722;
@@ -147,25 +148,23 @@ h2 {
     margin-top: 20px;
 }
 
-.login-box button:hover {
+.signup-box button:hover {
     background-color: #d65c1f;
 }
 
-.signup-link {
+.login-link {
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
     background-color: white;
 }
 
-.signup-link a {
+.login-link a {
     color: #f26722;
     text-decoration: none;
     background-color: white;
 }
 
-.signup-link a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }
-
-  
