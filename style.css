@@ -95,3 +95,23 @@ h1 {
 .welcome-container p {
     font-size: 20px;
 }
+
+/*Slideshow Panel*/
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.text-overlay h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 20px;
+}
