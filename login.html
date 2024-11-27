@@ -1,49 +1,60 @@
 <!-- login.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Info Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GameRadar+ Log In</title>
+    <link rel="stylesheet" href="login.css">
 </head>
-    <body>
-        <!-- Logo Section -->
-        <div class="logo-container">
-            <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" width: 300px, height: auto>
-        </div>
+<body>
 
-        <!-- Navigation Bar Section -->
-        <div class="navbar">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact.html">Contact Us </a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-            <!-- Search Bar -->
-            <div class="search-bar">
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" width="300px" height="auto">
+    </div>
+
+    <!-- Navigation Bar Section -->
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact Us </a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="search-bar">
             <li>
                 <form>
                     <input type="text" placeholder="Search...">
                     <button>🔍</button>
                 </form>
             </li>
-            </div>
-        </div>  
+        </div>
+    </div>  
 
-        <!--Login-->>
-        <form action="/login" method="POST">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome Back!</h2>
+            <form action="login-process.php" method="POST">
+                <div class="input-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+                <p class="signup-link">New to GameRadar+? <a href="sign-up.html">Join Now</a></p>
+            </form>
+        </div>
+    </div>
 
-            <button type="submit" class="btn">Login</button>
-            <button class="Create"><a href="sign-up.html">No Account? Sign Up Now</a></button>
-        </form>
-    </body>
+    <!-- Footer -->
+    <footer>some copyright stuff</footer>
+
+</body>
 </html>

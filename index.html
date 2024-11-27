@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Info Site</title>
+    <title>GameRadar+</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,34 +49,24 @@
             </div>
         </section>
 
-        <!-- Trending Game Section -->
-        <section class="trending-games">
-            <h2>Trending Games</h2>
-            <div class="slideshow-container">
-                <div class="slideshow">
-                <img src="GameRadar-Pictures\Game-Pictuers-01.jpg" alt="Featured Game Image">
-                <img src="GameRadar-Pictures\Game-Pictuers-02.jpg" alt="Featured Game Image">
-                <img src="GameRadar-Pictures\Game-Pictuers-03.jpg" alt="Featured Game Image">
-                <div class="text-overlay">
-                    <h3>TRENDING GAMES</h3>
-                    <p>Trendiest Games 11/24<p>
+        <!--Explore Game Section-->
+        <section class="container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id= "slide-1" src="GameRadar-Pictures\Game-Pictuers-01.jpg" alt="Featured Game Image">
+                    <img id= "slide-2" src="GameRadar-Pictures\Game-Pictuers-02.jpg" alt="Featured Game Image">
+                    <img id= "slide-3" src="GameRadar-Pictures\Game-Pictuers-03.jpg" alt="Featured Game Image">
                 </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
                 </div>
             </div>
         </section>
 
-        <!--Explore Game Section-->
-        <section class="explore-games">
-            <h2>Explore Games</h2>
-            <div class="game-info">
-                <img src="assets/game-images/featured-game.jpg" alt="Featured Game Image">
-                <div class="game-description">
-                    <h3>Game Title</h3>
-                    <p>A brief description of the game goes here.</p>
-                    <a href="game-details.html" class="btn">Read More</a>
-                </div>
-            </div>
-        </section>
+        <div class="space">
+        </div>
 
         <!--News Section-->
         <section class="news">
@@ -89,6 +79,10 @@
 
     <footer>
         <div class="page-end">
+            <div class="logo-container">
+                <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" width: 300px, height: auto>
+            </div>
+        <p><a href="link.com">Socials</a></p>
         <p>&copy; 2024 GameRadar+. All rights reserved.</p>
         </div>
     </footer>

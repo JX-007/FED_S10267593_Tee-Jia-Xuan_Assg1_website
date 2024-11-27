@@ -6,6 +6,7 @@
     background-color: #f0f0f0;
 }
 
+/* Header Section */
 h1 {
     text-align: center;
 }
@@ -22,23 +23,24 @@ h1 {
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space out the items */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     background-color: #868d94;
-    padding: 0 20px; /* Add some padding to the sides */
-    height: 60px; /* Set height for the navbar */
+    padding: 0 20px;
+    height: 60px;
 }
 
 .navbar ul {
     list-style-type: none;
-    display: flex; /* Use flexbox for the list items */
+    display: flex;
     margin: 0;
     padding: 0;
+    background-color: #868d94;
 }
 
 .navbar li {
-    float: left;
-    margin-right: 15px; /* Space out the list items */
+    margin-right: 15px;
+    
 }
 
 .navbar a {
@@ -47,15 +49,17 @@ h1 {
     padding: 15px;
     display: block;
     text-align: center;
+    background-color: #868d94;
 }
 
 .navbar a:hover {
     background-color: #43404d;
+    color: white
 }
 
 .search-bar li {
     display: flex;
-    align-items: center; /* Center search bar vertically */
+    align-items: center;
     float: right;
 }
 
@@ -63,10 +67,10 @@ h1 {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px;  /* Fixed width of the search bar */
+    width: 200px;
 }
 
-.search-bar button{
+.search-bar button {
     border: 1px solid black;
 }
 
@@ -97,21 +101,88 @@ h1 {
 }
 
 /*Slideshow Panel*/
-/* Text Overlay */
-.text-overlay {
+.container {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem  hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1.5rem;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
+    bottom: 1.25rem;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: transparent;
 }
 
-.text-overlay h3 {
-    font-size: 32px;
-    margin: 0;
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
 }
 
-.text-overlay p {
-    font-size: 20px;
+.slider-nav a:hover {
+    opacity: 1;
 }
+
+/*Space*/
+.space {
+    width: auto;
+    height: 10rem;
+    background-color: pink; 
+}
+
+
+/*Log In*/
+/*
+.login-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.login-container button {
+    color: #f26722;
+    background-color: #232128;
+    border-radius: 10%;
+    width: fit-content;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;;
+}*/

@@ -1,0 +1,170 @@
+/* Basic reset */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+h1 {
+    text-align: center;
+}
+
+.logo-container {
+    width: 100%;
+    height: 80px;
+    background-color: #232128;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #868d94;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #868d94;
+}
+
+.navbar li {
+    margin-right: 15px;
+    
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    background-color: #868d94;
+}
+
+.navbar a:hover {
+    background-color: #43404d;
+    color: white
+}
+
+.search-bar li {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-bar button {
+    border: 1px solid black;
+}
+
+/* Login Section */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.login-container {
+    width: 100%;
+    height: calc(100vh - 140px); /* Full height minus navbar and logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.login-box {
+    width: 300px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    background-color: white; /* White background for input */
+    color: #333; /* Dark text color */
+}
+
+/* Input focus */
+.login-box form {
+    background-color: white;
+}
+/* Submit button */
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f26722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-box button:hover {
+    background-color: #d65c1f;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.signup-link a {
+    color: #f26722;
+    text-decoration: none;
+    background-color: white;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+  
