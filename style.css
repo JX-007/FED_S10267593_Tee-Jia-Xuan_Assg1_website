@@ -159,30 +159,10 @@ h1 {
 }
 
 
-/*Log In*/
-/*
-.login-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+#sticky-container {
+    position: sticky;
+    top: 0; /* Stick the container at the top of the viewport */
+    z-index: 10; /* Ensure the sticky element stays above other content */
+    background-color: #fff; /* Optional: Background color to make sure it appears over the content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.login-container form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding-top: 1rem;
-}
-
-.login-container button {
-    color: #f26722;
-    background-color: #232128;
-    border-radius: 10%;
-    width: fit-content;
-    height: 30px;
-    padding-left: 5px;
-    padding-right: 5px;;
-}*/

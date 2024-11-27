@@ -168,4 +168,10 @@ h2 {
     text-decoration: underline;
 }
 
-  
+#sticky-container {
+    position: sticky;
+    top: 0; /* Stick the container at the top of the viewport */
+    z-index: 10; /* Ensure the sticky element stays above other content */
+    background-color: #fff; /* Optional: Background color to make sure it appears over the content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
