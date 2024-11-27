@@ -74,20 +74,10 @@ h1 {
     border: 1px solid black;
 }
 
-.welcome-container div {
-    padding: 50px;
+.welcome-container {
+    background-color: aqua;
 }
 
-.welcome-container h1 {
-    padding-bottom: 20px;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-.welcome-container p {
-    font-size: 20px;
-}
 
 #sticky-container {
     position: sticky;
