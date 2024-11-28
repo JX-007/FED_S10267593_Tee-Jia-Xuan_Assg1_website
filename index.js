@@ -39,3 +39,8 @@ function nextSlide() {
     slideIndex++;
     showSlide(slideIndex);
 }
+
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
+}
