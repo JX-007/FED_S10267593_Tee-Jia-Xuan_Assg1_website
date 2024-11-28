@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameRadar+ | Games</title>
-    <link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
     <section id="sticky-container">
@@ -12,9 +12,11 @@
         <div class="logo-container">
             <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" style="width: 300px; height: auto;">
         </div>
-
+   
         <!-- Navigation Bar Section -->
         <div class="navbar">
+            <!-- Hamburger Icon for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
@@ -24,7 +26,7 @@
             </ul>
             <!-- Search Bar -->
             <div class="search-bar">
-                <form>
+                <form class="search-form">
                     <input type="text" placeholder="Search...">
                     <button type="submit">🔍</button>
                 </form>
@@ -96,5 +98,55 @@
             <div class="text">Mystery Coast</div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+   
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="https://x.com/gamesradar"><i class="fab fa-x"></i>X</a></li>
+                    <li><a href="https://www.facebook.com/gamesradarplus/"><i class="fab fa-facebook"></i>Facebook</a></li>
+                    <li><a href="https://www.instagram.com/gamesradar/"><i class="fab fa-instagram"></i>Instagram</a></li>
+                    <li><a href="https://www.youtube.com/user/GamesRadar"><i class="fab fa-youtube"></i>YouTube</a></li>
+                    <li><a href="https://flipboard.com/@GamesRadar"><i class="fab fa-flipboard"></i>FlipBoard</a></li>
+                </ul>
+            </div>
+   
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get the latest gaming news and updates!</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+   
+        <div class="footer-bottom">
+            <p>&copy; 2024 GamesRadar+. All rights reserved. | <a href="https://futureplc.com/privacy-policy/">Privacy Policy</a> | <a href="https://futureplc.com/terms-conditions/">Terms & Conditions</a></p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
+        }
+    </script>
 </body>
 </html>
+
+
+
+

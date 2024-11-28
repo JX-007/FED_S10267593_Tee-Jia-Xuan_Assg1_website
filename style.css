@@ -39,6 +39,7 @@ h1 {
     height: 60px;
     position: relative; /* Add this to position elements absolutely inside */
     width: 100%;
+    z-index: 1000;
 }
 
 
@@ -123,10 +124,13 @@ h1 {
     width: 20px;  /* Set icon size */
     height: 20px;
 }
+
 #sticky-container {
-    position: sticky;
+    position: fixed; /* Fix it to the top of the page */
     top: 0;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it's above other content */
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -459,13 +463,21 @@ h1 {
 .slider {
     position: relative;
     width: 100%;
+    height: 600;
     margin: auto;
     overflow: hidden;
+    display: flex;             /* Use flexbox to center the content */
+    justify-content: center;  /* Center images horizontally */
+    align-items: center;  
+    z-index: 1; /* Set a lower z-index than the navbar */
+    margin-top: 180px; /* Add some space below the fixed navbar */
 }
 
 .slider img {
-    width: 100%;
     display: none;
+    max-width: 80%;
+    max-height: 700px;
+    object-fit: cover;
 }
 
 img.displaySlide {
@@ -483,7 +495,7 @@ img.displaySlide {
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 999; /* Ensure the buttons are above the images */
 }
 
 .prev {
@@ -496,4 +508,31 @@ img.displaySlide {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider .slides {
+    display: flex;             /* Arrange the images horizontally */
+    justify-content: center;   /* Center the images within the slides container */
+    align-items: center;       /* Vertically center images in the slides container */
+}
+
+.spacing {
+    margin-bottom: 40px;
+}
+
+.overlay-text {
+    position: absolute;    /* Position the text relative to the .slider */
+    top: 50%;              /* Center vertically */
+    left: 50%;             /* Center horizontally */
+    transform: translate(-50%, -50%); /* Exactly center the text */
+    color: white;          /* Make the text white so it stands out */
+    text-align: center;    /* Center-align the text */
+    z-index: 10;           /* Ensure the text is above the slider images */
+    font-family: Arial, sans-serif;  /* Choose your preferred font */
+}
+
+.overlay-text h1{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
