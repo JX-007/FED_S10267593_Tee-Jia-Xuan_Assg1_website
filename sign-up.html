@@ -16,6 +16,8 @@
     
         <!-- Navigation Bar Section -->
         <div class="navbar">
+            <!-- Hamburger Icon for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
@@ -95,5 +97,11 @@
             <p>&copy; 2024 GamesRadar+. All rights reserved. | <a href="https://futureplc.com/privacy-policy/">Privacy Policy</a> | <a href="https://futureplc.com/terms-conditions/">Terms & Conditions</a></p>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
+        }
+    </script>
 </body>
 </html>
