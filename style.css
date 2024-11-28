@@ -1,15 +1,17 @@
-/* General Styles */
+/* Basic reset */
 * {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
+
 
 /* Header Section */
 h1 {
     text-align: center;
 }
+
 
 .logo-container {
     width: 100%;
@@ -21,14 +23,24 @@ h1 {
     box-sizing: border-box;
 }
 
+
+/* Initially hide the hamburger icon by default (for larger screens) */
+.navbar .hamburger {
+    display: none;
+}
+
+
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Shift the nav buttons to the left */
     align-items: center;
     background-color: #868d94;
     padding: 0 20px;
     height: 60px;
+    position: relative; /* Add this to position elements absolutely inside */
+    width: 100%;
 }
+
 
 .navbar ul {
     list-style-type: none;
@@ -36,12 +48,15 @@ h1 {
     margin: 0;
     padding: 0;
     background-color: #868d94;
+    width: auto;
+    flex-grow: 1; /* Allow navbar links to take available space */
 }
+
 
 .navbar li {
     margin-right: 15px;
-    
 }
+
 
 .navbar a {
     color: black;
@@ -52,104 +67,433 @@ h1 {
     background-color: #868d94;
 }
 
+
 .navbar a:hover {
     background-color: #43404d;
-    color: white
+    color: white;
 }
 
-.search-bar li {
-    display: flex;
-    align-items: center;
-    float: right;
+
+/* Search bar container */
+.search-bar {
+    position: absolute;  /* Make the search bar absolute to the navbar */
+    right: 70px;  /* Move the search bar a bit to the left by increasing the value */
+    top: 50%;  /* Vertically center it */
+    transform: translateY(-50%);  /* Ensure it's vertically centered */
+    display: flex;  /* Use flexbox to align items horizontally */
+    align-items: center;  /* Vertically center the items */
 }
 
-.search-bar input {
+
+/* Search form */
+.search-form {
+    display: flex;  /* Use flexbox to align input and button horizontally */
+    margin: 0;  /* Remove default margin from the form */
+    padding: 0;  /* Remove default padding from the form */
+}
+
+
+/* Search input field */
+.search-form input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px;
+    width: 160px;  /* Set the width for the input */
+    margin-right: 8px;  /* Add some space between the input and button */
 }
 
-.search-bar button {
+
+/* Search button */
+.search-form button {
+    background-color: #fff;
     border: 1px solid black;
+    border-radius: 4px;
+    width: 40px;  /* Set the width to make it a square */
+    height: 40px;  /* Set the height to make it a square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;  /* Remove any default padding */
 }
 
-.welcome-container {
+
+/* Icon inside the button */
+.search-form button svg {
+    width: 20px;  /* Set icon size */
+    height: 20px;
+}
+#sticky-container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: #232128;
+    color: white;
+    padding: 40px 0;
+    font-size: 1rem;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start; /* Ensures alignment at the top */
+    padding: 0 20px; /* Adjust left/right padding */
+}
+
+
+.footer-links, .footer-social, .footer-newsletter {
+    width: 30%;
+    min-width: 220px; /* Prevents items from shrinking too much */
+}
+
+
+.footer-links h4, .footer-social h4, .footer-newsletter h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+
+.footer-links a {
+    text-decoration: underline;
+    color: white;
+}
+
+
+.footer-social a {
+    display: block;
+    text-decoration: underline;
+    color: white;
+}
+
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #f26722;
+}
+
+
+.footer-social i {
+    margin-right: 10px;
+}
+
+
+/* Aligning the Follow Us header and social links */
+.footer-social {
+    width: 30%; /* Prevent shrinking on smaller screens */
+    min-width: 220px; /* Prevents shrinking */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: black ;
-    max-width: fit-content;
-    height: 400px;
-    padding-left: 10px auto;
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Controls space between social links */
 }
 
 
-
-/*Slideshow Panel*/
-.container {
-    padding: 2rem;
+.footer-social h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left; /* Ensure the heading aligns left */
 }
 
-.slider-wrapper {
-    position: relative;
-    max-width: 52rem;
-    margin: 0 auto;
-}
-.slider {
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
     display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem  hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-
+    flex-direction: column;
+    gap: 10px; /* Controls space between social links */
 }
 
-.slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+
+.footer-social li {
+    margin-bottom: 0; /* Remove extra margin */
 }
 
-.slider-nav {
-    display: flex;
-    column-gap: 1.5rem;
-    position: absolute;
-    left: 50%;
-    bottom: 1.25rem;
-    transform: translateX(-50%);
-    z-index: 1;
+
+.footer-newsletter form {
     background-color: transparent;
 }
 
-.slider-nav a {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
-}
 
-.slider-nav a:hover {
-    opacity: 1;
-}
-
-/*Space*/
-.space {
-    width: auto;
-    height: 10rem;
-    background-color: pink; 
+.footer-newsletter p {
+    padding-bottom: 15px;
 }
 
 
-#sticky-container {
-    position: sticky;
-    top: 0; /* Stick the container at the top of the viewport */
-    z-index: 10; /* Ensure the sticky element stays above other content */
-    background-color: #fff; /* Optional: Background color to make sure it appears over the content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid rgb(139, 139, 139);
+    margin-right: 10px;
+    width: 70%;
+}
+
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #f26722;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.footer-newsletter button:hover {
+    background-color: #c7561d;
+}
+
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Ensures center alignment horizontally */
+    text-align: center;
+    padding: 20px 0;
+    background-color: #232128;
+    font-size: 0.875rem;
+}
+
+
+.footer-bottom p {
+    color: white;
+    margin-top: 1rem; /* Reduced margin */
+}
+
+
+.footer-bottom a {
+    color: white;
+}
+
+
+.footer-bottom a:hover {
+    color: #f26722;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .footer-links, .footer-social, .footer-newsletter {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center on mobile */
+        gap: 10px; /* Gap between links */
+    }
+
+
+    .footer-newsletter input[type="email"] {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    .footer-bottom p {
+        margin: 8px;
+    }
+}
+
+
+/* Navbar for Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Align links vertically on small screens */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+
+    .navbar ul {
+        display: none; /* Hide the navbar links by default */
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+
+    .navbar li {
+        margin: 10px 0;
+        width: 100%; /* Ensure the list items span the entire width */
+    }
+
+
+    .navbar a {
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        text-align: left;
+        background-color: #868d94; /* Default background color */
+    }
+
+
+    .navbar a:hover {
+        background-color: #43404d; /* Darken background when hovered */
+        color: white;
+    }
+   
+    /* Ensure the hover effect works when the hamburger menu is active */
+    .navbar.active a:hover {
+        background-color: #43404d; /* Darken background when hovered inside active menu */
+        color: white;
+    }
+
+
+    .navbar.active ul {
+        display: flex; /* Show the navbar links when active */
+        max-width: 45%;
+    }
+
+
+    /* Hamburger icon adjustments */
+    .navbar .hamburger {
+        display: block; /* Show the hamburger on small screens */
+        cursor: pointer;
+        font-size: 30px;
+        color: #f26722; /* Set the color of the hamburger */
+    }
+   
+    /* Hover effect for hamburger */
+    .navbar .hamburger:hover {
+        color: #c7561d; /* Change color on hover */
+        background-color: #767c82; /* Background color on hover */
+    }
+
+
+    .navbar.active a:hover {
+        background-color: #43404d; /* Darken background when hovered inside active menu */
+        color: white;
+    }
+
+
+    .search-bar {
+        position: absolute;
+        right: 20px;  /* Keep it 20px from the right edge */
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
+        display: flex;  /* Keep elements aligned horizontally */
+        align-items: center;
+        justify-content: flex-start;  /* Align horizontally */
+        width: 70vw; /* Set the width of the search bar as a percentage of the viewport width */
+        max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
+    }
+
+
+    .search-bar input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex-grow: 1;  /* Allow the input to take up available space */
+        margin-right: 8px;  /* Add space between input and button */
+        width: 100%;  /* Full width relative to the container */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        font-size: 1em;  /* Keep text size relative */
+    }
+
+
+    .search-bar button {
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 12vw;  /* Button width based on viewport width */
+        height: 12vw;  /* Button height based on viewport width */
+        min-width: 30px;  /* Prevent it from shrinking too much */
+        min-height: 30px;  /* Prevent it from shrinking too much */
+        max-width: 40px;  /* Max button size */
+        max-height: 40px;  /* Max button size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0;  /* Remove any default padding */
+    }
+
+
+    /* Icon inside the button */
+    .search-bar button svg {
+        width: 20px;  /* Set icon size */
+        height: 20px;
+    }
+}
+
+/* Slider Stuff */
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
+}
+
+/* Next and Previous Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }

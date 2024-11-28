@@ -12,11 +12,13 @@
         <div class="logo-container">
             <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" style="width: 300px; height: auto;">
         </div>
-    
+   
         <!-- Navigation Bar Section -->
         <div class="navbar">
+            <!-- Hamburger Icon for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
@@ -24,45 +26,24 @@
             </ul>
             <!-- Search Bar -->
             <div class="search-bar">
-                <form>
+                <form class="search-form">
                     <input type="text" placeholder="Search...">
-                    <button>🔍</button>
+                    <button type="submit">🔍</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main>
-        <!--Explore Game Section-->
-        <section class="container">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img id= "slide-1" src="GameRadar-Pictures\Game-Pictuers-01.jpg" alt="Featured Game Image">
-                    <img id= "slide-2" src="GameRadar-Pictures\Game-Picture-04.jpg" alt="Featured Game Image">
-                    <img id= "slide-3" src="GameRadar-Pictures\Game-Pictuers-03.jpg" alt="Featured Game Image">
-                </div>
-                <div class="slider-nav">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-2"></a>
-                    <a href="#slide-3"></a>
-                </div>
-            </div>
-        </section>
-
-        <div class="space">
+    <!--Explore Game Section-->
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="GameRadar-Pictures/Game-Pictuers-01.jpg" alt="Image #1">
+            <img class="slide" src="GameRadar-Pictures/Game-Pictuers-02.jpg" alt="Image #2">
+            <img class="slide" src="GameRadar-Pictures/Game-Pictuers-03.jpg" alt="Image #3">
         </div>
-
-        <!--News Section-->
-        <div class="image-box">
-            <div class="overlay">
-                <div class="left-box"></div>
-                <div class="right-box"></div>
-                <div class="text">Your Text Here</div>
-            </div>
-            <img src="your-image.jpg" alt="Image">
-        </div>
-    </main>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -77,7 +58,7 @@
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
-    
+   
             <div class="footer-social">
                 <h4>Follow Us</h4>
                 <ul>
@@ -88,7 +69,7 @@
                     <li><a href="https://flipboard.com/@GamesRadar"><i class="fab fa-flipboard"></i>FlipBoard</a></li>
                 </ul>
             </div>
-    
+   
             <div class="footer-newsletter">
                 <h4>Newsletter</h4>
                 <p>Subscribe to get the latest gaming news and updates!</p>
@@ -98,17 +79,13 @@
                 </form>
             </div>
         </div>
-    
+   
         <div class="footer-bottom">
             <p>&copy; 2024 GamesRadar+. All rights reserved. | <a href="https://futureplc.com/privacy-policy/">Privacy Policy</a> | <a href="https://futureplc.com/terms-conditions/">Terms & Conditions</a></p>
         </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
+
 
