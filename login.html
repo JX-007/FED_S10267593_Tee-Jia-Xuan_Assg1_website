@@ -51,7 +51,26 @@
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
 
+        // Get entered username and password from the form
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Retrieve stored credentials from localStorage
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        // Check if the entered credentials match the stored ones
+        if (username === storedUsername && password === storedPassword) {
+            alert('Login successful!');
+        } else {
+            alert('Invalid username or password');
+        }
+        });
+    </script>
     <!-- Footer -->
     <footer>some copyright stuff</footer>
 

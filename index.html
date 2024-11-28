@@ -74,7 +74,15 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        window.onload = function() {
+        // Check if user credentials are in localStorage
+        const storedUsername = localStorage.getItem('username');
+        if (storedUsername) {
+        document.getElementById('username').value = storedUsername;
+        }
+        };
+    </script>
 </body>
 </html>
 

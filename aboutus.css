@@ -74,15 +74,75 @@ h1 {
     border: 1px solid black;
 }
 
-.welcome-container {
-    background-color: aqua;
-}
-
-
 #sticky-container {
     position: sticky;
     top: 0; /* Stick the container at the top of the viewport */
     z-index: 10; /* Ensure the sticky element stays above other content */
     background-color: #fff; /* Optional: Background color to make sure it appears over the content */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* General styles for the about us section */
+.about-us-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #bababa; /* Dark background to align with gaming theme */
+    color: #fff; /* Light text color for contrast */
+}
+
+.about-us-content {
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 5%;
+}
+
+.about-us-content h1 {
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #f26722;
+}
+
+.intro {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #f26722;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #232128;
+}
+
+.team-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for emphasis */
+    height: auto;
+    width: -50%;
+    margin-left: 20px;
+    background-color: transparent;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-image img {
+        width: 70%;
+        margin: 20px 0;
+    }
 }
