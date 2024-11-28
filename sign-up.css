@@ -218,12 +218,20 @@ h2 {
 }
 
 .footer-links a:hover, .footer-social a:hover {
-    color: #e91e63; /* Accent color on hover */
+    color: #f26722; /* Accent color on hover */
 }
 
 .footer-social i {
     margin-right: 10px;
     font-size: 1.25rem;
+}
+
+.footer-social ul {
+color: black;
+}
+
+.footer-newsletter p {
+    padding-bottom: 15px;
 }
 
 .footer-newsletter input[type="email"] {
@@ -232,11 +240,13 @@ h2 {
     border-radius: 5px;
     margin-right: 10px;
     width: 70%;
+    background-color: #ddd;
+    border: 1px solid rgb(139, 139, 139);
 }
 
 .footer-newsletter button {
     padding: 10px 20px;
-    background-color: #e91e63;
+    background-color: #f26722;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -244,23 +254,23 @@ h2 {
 }
 
 .footer-newsletter button:hover {
-    background-color: #c2185b;
+    background-color: #c7561d;
 }
 
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
-    background-color: #222;
+    background-color: #ffffff;
     font-size: 0.875rem;
 }
 
 .footer-bottom a {
-    color: #ddd;
-    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
 }
 
 .footer-bottom a:hover {
-    color: #e91e63; /* Accent color on hover */
+    color: #f26722;
 }
 
 @media (max-width: 768px) {
