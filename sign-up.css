@@ -3,7 +3,6 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
     box-sizing: border-box;
 }
 
@@ -20,6 +19,11 @@ h1 {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+}
+
+/* Initially hide the hamburger icon by default (for larger screens) */
+.navbar .hamburger {
+    display: none;
 }
 
 .navbar {
@@ -61,26 +65,52 @@ h1 {
     color: white;
 }
 
-/* Move search bar to the right */
+/* Search bar container */
 .search-bar {
     position: absolute;  /* Make the search bar absolute to the navbar */
-    right: 20px;  /* Keep it 20px away from the right edge */
+    right: 70px;  /* Move the search bar a bit to the left by increasing the value */
     top: 50%;  /* Vertically center it */
     transform: translateY(-50%);  /* Ensure it's vertically centered */
-    display: flex;
-    align-items: center;
+    display: flex;  /* Use flexbox to align items horizontally */
+    align-items: center;  /* Vertically center the items */
 }
 
-.search-bar input {
+/* Search form */
+.search-form {
+    display: flex;  /* Use flexbox to align input and button horizontally */
+    margin: 0;  /* Remove default margin from the form */
+    padding: 0;  /* Remove default padding from the form */
+}
+
+/* Search input field */
+.search-form input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px;
+    width: 160px;  /* Set the width for the input */
+    margin-right: 8px;  /* Add some space between the input and button */
 }
 
-.search-bar button {
+/* Search button */
+.search-form button {
+    background-color: #fff;
     border: 1px solid black;
+    border-radius: 4px;
+    width: 40px;  /* Set the width to make it a square */
+    height: 40px;  /* Set the height to make it a square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;  /* Remove any default padding */
 }
+
+/* Icon inside the button */
+.search-form button svg {
+    width: 20px;  /* Set icon size */
+    height: 20px;
+}
+
 
 /* Sign-Up Box */
 body {
@@ -98,12 +128,14 @@ body {
 }
 
 .signup-box {
-    width: 300px;
+    width: 100%;  /* Allow full width on smaller screens */
+    max-width: 400px; /* Set a max-width for the box */
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: white; /* Ensuring white background */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;  /* Allow it to grow based on available space */
 }
 
 h2 {
@@ -189,10 +221,13 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
+    align-items: flex-start; /* Ensures alignment at the top */
+    padding: 0 20px; /* Adjust left/right padding */
 }
 
 .footer-links, .footer-social, .footer-newsletter {
     width: 30%;
+    min-width: 220px; /* Prevents items from shrinking too much */
 }
 
 .footer-links h4, .footer-social h4, .footer-newsletter h4 {
@@ -232,6 +267,38 @@ h2 {
     margin-right: 10px;
 }
 
+/* Aligning the Follow Us header and social links */
+.footer-social {
+    width: 30%; /* Prevent shrinking on smaller screens */
+    min-width: 220px; /* Prevents shrinking */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Controls space between social links */
+}
+
+.footer-social h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left; /* Ensure the heading aligns left */
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Controls space between social links */
+}
+
+.footer-social li {
+    margin-bottom: 0; /* Remove extra margin */
+}
+
 .footer-newsletter form {
     background-color: transparent;
 }
@@ -263,7 +330,8 @@ h2 {
 .footer-bottom {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Ensures center alignment horizontally */
     text-align: center;
     padding: 20px 0;
     background-color: #232128;
@@ -272,7 +340,7 @@ h2 {
 
 .footer-bottom p {
     color: white;
-    margin-top: 4rem;
+    margin-top: 1rem; /* Reduced margin */
 }
 
 .footer-bottom a {
@@ -282,6 +350,8 @@ h2 {
 .footer-bottom a:hover {
     color: #f26722;
 }
+
+
 
 @media (max-width: 768px) {
     .footer-content {
@@ -294,21 +364,32 @@ h2 {
         margin-bottom: 20px;
     }
 
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center on mobile */
+        gap: 10px; /* Gap between links */
+    }
+
     .footer-newsletter input[type="email"] {
+        margin-bottom: 10px;
         width: 80%;
+    }
+    .footer-bottom p {
+        margin: 8px;
     }
 }
 
 /* Navbar for Mobile */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: column; /* Align links vertically on small screens */
         align-items: flex-start;
         padding: 10px;
     }
 
     .navbar ul {
-        display: none;
+        display: none; /* Hide the navbar links by default */
         width: 100%;
         flex-direction: column;
         margin-top: 10px;
@@ -316,63 +397,96 @@ h2 {
 
     .navbar li {
         margin: 10px 0;
-        width: 100%;
+        width: 100%; /* Ensure the list items span the entire width */
     }
 
     .navbar a {
+        color: black;
+        text-decoration: none;
         padding: 15px;
-        width: 100%;
+        display: block;
         text-align: left;
+        background-color: #868d94; /* Default background color */
     }
 
     .navbar a:hover {
-        background-color: #43404d;
+        background-color: #43404d; /* Darken background when hovered */
+        color: white;
+    }
+    
+    /* Ensure the hover effect works when the hamburger menu is active */
+    .navbar.active a:hover {
+        background-color: #43404d; /* Darken background when hovered inside active menu */
         color: white;
     }
 
     .navbar.active ul {
-        display: flex;
+        display: flex; /* Show the navbar links when active */
+        max-width: 45%;
     }
 
+    /* Hamburger icon adjustments */
     .navbar .hamburger {
-        display: none; /* Initially hide hamburger icon on larger screens */
-    }
-
-    .navbar .hamburger {
-        display: block;
+        display: block; /* Show the hamburger on small screens */
         cursor: pointer;
-        color: transparent;
         font-size: 30px;
+        color: #f26722; /* Set the color of the hamburger */
+    }
+    
+    /* Hover effect for hamburger */
+    .navbar .hamburger:hover {
+        color: #c7561d; /* Change color on hover */
+        background-color: #767c82; /* Background color on hover */
     }
 
-    .navbar .hamburger:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+    .navbar.active a:hover {
+        background-color: #43404d; /* Darken background when hovered inside active menu */
+        color: white;
     }
 
     .search-bar {
         position: absolute;
-        right: 20px; /* Keep it 20px from the right edge */
+        right: 20px;  /* Keep it 20px from the right edge */
         top: 50%;
         transform: translateY(-50%); /* Center vertically */
+        display: flex;  /* Keep elements aligned horizontally */
+        align-items: center;
+        justify-content: flex-start;  /* Align horizontally */
+        width: 70vw; /* Set the width of the search bar as a percentage of the viewport width */
+        max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
     }
 
-
     .search-bar input {
-        width: calc(100% - 40px);
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex-grow: 1;  /* Allow the input to take up available space */
+        margin-right: 8px;  /* Add space between input and button */
+        width: 100%;  /* Full width relative to the container */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        font-size: 1em;  /* Keep text size relative */
     }
 
     .search-bar button {
-        margin-top: 5px;
-        width: 100%;
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 12vw;  /* Button width based on viewport width */
+        height: 12vw;  /* Button height based on viewport width */
+        min-width: 30px;  /* Prevent it from shrinking too much */
+        min-height: 30px;  /* Prevent it from shrinking too much */
+        max-width: 40px;  /* Max button size */
+        max-height: 40px;  /* Max button size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0;  /* Remove any default padding */
     }
-}
 
-@media (max-width: 600px) {
-    .navbar .home-button {
-        display: none; /* Hide home button on small screens */
-    }
-
-    .navbar .hamburger {
-        display: block; /* Show hamburger on very small screens */
+    /* Icon inside the button */
+    .search-bar button svg {
+        width: 20px;  /* Set icon size */
+        height: 20px;
     }
 }
