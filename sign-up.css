@@ -176,3 +176,105 @@ h2 {
     background-color: #fff; /* Optional: Background color to make sure it appears over the content */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Footer Styles */
+.site-footer {
+    background-color: #bfbfbf; /* Dark background */
+    color: #232128; /* Light text color for contrast */
+    padding: 40px 0;
+    font-size: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-links, .footer-social, .footer-newsletter {
+    width: 30%;
+}
+
+.footer-links h4, .footer-social h4, .footer-newsletter h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-social a {
+    text-decoration: none;
+    color: #ddd; /* Lighter text for links */
+    font-size: 1rem;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #e91e63; /* Accent color on hover */
+}
+
+.footer-social i {
+    margin-right: 10px;
+    font-size: 1.25rem;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #c2185b;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
+    font-size: 0.875rem;
+}
+
+.footer-bottom a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #e91e63; /* Accent color on hover */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links, .footer-social, .footer-newsletter {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 80%;
+    }
+}
