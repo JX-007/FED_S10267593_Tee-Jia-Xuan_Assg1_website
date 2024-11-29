@@ -268,10 +268,12 @@ h1 {
         text-align: center;
     }
 
+
     .footer-links, .footer-social, .footer-newsletter {
         width: 100%;
         margin-bottom: 20px;
     }
+
 
     .footer-social {
         display: flex;
@@ -279,6 +281,7 @@ h1 {
         align-items: center; /* Center on mobile */
         gap: 10px; /* Gap between links */
     }
+
 
     .footer-newsletter input[type="email"] {
         margin-bottom: 10px;
@@ -289,6 +292,7 @@ h1 {
     }
 }
 
+
 /* Navbar for Mobile */
 @media (max-width: 768px) {
     .navbar {
@@ -297,6 +301,7 @@ h1 {
         padding: 10px;
     }
 
+
     .navbar ul {
         display: none; /* Hide the navbar links by default */
         width: 100%;
@@ -304,10 +309,12 @@ h1 {
         margin-top: 10px;
     }
 
+
     .navbar li {
         margin: 10px 0;
         width: 100%; /* Ensure the list items span the entire width */
     }
+
 
     .navbar a {
         color: black;
@@ -317,6 +324,7 @@ h1 {
         text-align: left;
         background-color: #868d94; /* Default background color */
     }
+
 
     .navbar a:hover {
         background-color: #43404d; /* Darken background when hovered */
@@ -335,6 +343,7 @@ h1 {
         max-width: 45%;
     }
 
+
     /* Hamburger icon adjustments */
     .navbar .hamburger {
         display: block; /* Show the hamburger on small screens */
@@ -349,10 +358,12 @@ h1 {
         background-color: #767c82; /* Background color on hover */
     }
 
+
     .navbar.active a:hover {
         background-color: #43404d; /* Darken background when hovered inside active menu */
         color: white;
     }
+
 
     .search-bar {
         position: absolute;
@@ -366,6 +377,7 @@ h1 {
         max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
     }
 
+
     .search-bar input {
         padding: 8px;
         border: 1px solid #ccc;
@@ -376,6 +388,7 @@ h1 {
         max-width: 100%; /* Ensure it doesn't overflow */
         font-size: 1em;  /* Keep text size relative */
     }
+
 
     .search-bar button {
         background-color: #fff;
