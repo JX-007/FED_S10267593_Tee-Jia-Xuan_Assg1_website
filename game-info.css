@@ -1,0 +1,365 @@
+/* Basic reset */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+h1 {
+    text-align: center;
+}
+
+.logo-container {
+    width: 100%;
+    height: 80px;
+    background-color: #232128;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Initially hide the hamburger icon by default (for larger screens) */
+.navbar .hamburger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Shift the nav buttons to the left */
+    align-items: center;
+    background-color: #868d94;
+    padding: 0 20px;
+    height: 60px;
+    position: relative; /* Add this to position elements absolutely inside */
+    width: 100%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #868d94;
+    width: auto;
+    flex-grow: 1; /* Allow navbar links to take available space */
+}
+
+.navbar li {
+    margin-right: 15px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    background-color: #868d94;
+}
+
+.navbar a:hover {
+    background-color: #43404d;
+    color: white;
+}
+
+/* Search bar container */
+.search-bar {
+    position: absolute;  /* Make the search bar absolute to the navbar */
+    right: 70px;  /* Move the search bar a bit to the left by increasing the value */
+    top: 50%;  /* Vertically center it */
+    transform: translateY(-50%);  /* Ensure it's vertically centered */
+    display: flex;  /* Use flexbox to align items horizontally */
+    align-items: center;  /* Vertically center the items */
+}
+
+/* Search form */
+.search-form {
+    display: flex;  /* Use flexbox to align input and button horizontally */
+    margin: 0;  /* Remove default margin from the form */
+    padding: 0;  /* Remove default padding from the form */
+}
+
+/* Search input field */
+.search-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 160px;  /* Set the width for the input */
+    margin-right: 8px;  /* Add some space between the input and button */
+}
+
+/* Search button */
+.search-form button {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 40px;  /* Set the width to make it a square */
+    height: 40px;  /* Set the height to make it a square */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;  /* Remove any default padding */
+}
+
+/* Icon inside the button */
+.search-form button svg {
+    width: 20px;  /* Set icon size */
+    height: 20px;
+}
+
+#sticky-container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #232128;
+    color: white;
+    padding: 40px 0;
+    font-size: 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start; /* Ensures alignment at the top */
+    padding: 0 20px; /* Adjust left/right padding */
+}
+
+.footer-links, .footer-social, .footer-newsletter {
+    width: 30%;
+    min-width: 220px; /* Prevents items from shrinking too much */
+}
+
+.footer-links h4, .footer-social h4, .footer-newsletter h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-social a {
+    display: block;
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #f26722;
+}
+
+.footer-social i {
+    margin-right: 10px;
+}
+
+/* Aligning the Follow Us header and social links */
+.footer-social {
+    width: 30%; /* Prevent shrinking on smaller screens */
+    min-width: 220px; /* Prevents shrinking */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Controls space between social links */
+}
+
+.footer-social h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left; /* Ensure the heading aligns left */
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Controls space between social links */
+}
+
+.footer-social li {
+    margin-bottom: 0; /* Remove extra margin */
+}
+
+.footer-newsletter form {
+    background-color: transparent;
+}
+
+.footer-newsletter p {
+    padding-bottom: 15px;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid rgb(139, 139, 139);
+    margin-right: 10px;
+    width: 70%;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #f26722;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #c7561d;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Ensures center alignment horizontally */
+    text-align: center;
+    padding: 20px 0;
+    background-color: #232128;
+    font-size: 0.875rem;
+}
+
+.footer-bottom p {
+    color: white;
+    margin-top: 1rem; /* Reduced margin */
+}
+
+.footer-bottom a {
+    color: white;
+}
+
+.footer-bottom a:hover {
+    color: #f26722;
+}
+
+/* New Article Styles */
+.article-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #232128;
+}
+
+.article-header p {
+    font-size: 1.1rem;
+    color: #868d94;
+    margin-top: 10px;
+}
+
+.article-body {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.article-body p {
+    margin-bottom: 15px;
+}
+
+.article-body img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.article-body h3 {
+    font-size: 1.75rem;
+    margin-top: 30px;
+    color: #232128;
+}
+
+.article-body ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.article-body li {
+    margin-bottom: 10px;
+}
+
+.article-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.article-footer p {
+    font-size: 1rem;
+    color: #868d94;
+}
+
+/* Responsive Design for Articles */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 15px;
+    }
+
+    .article-header h2 {
+        font-size: 2rem;
+    }
+
+    .article-body {
+        font-size: 1.1rem;
+    }
+
+    .article-body p {
+        margin-bottom: 12px;
+    }
+
+    .article-body img {
+        margin-top: 15px;
+    }
+
+    .article-body h3 {
+        font-size: 1.5rem;
+    }
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 20px;
+}

@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the form and username input
     const form = document.getElementById("form");
-    
+
     // Handle form submission
     form.addEventListener("submit", function(event) {
         event.preventDefault();  // Prevent the form from submitting the traditional way
@@ -13,14 +13,23 @@ document.addEventListener("DOMContentLoaded", function() {
         const password = document.getElementById("password").value;
         const password2 = document.getElementById("password2").value;
 
+        // Check if all fields are filled out
+        if (!username || !email || !password || !password2) {
+            alert("Please fill out all fields.");
+            return;
+        }
+
         // Check if passwords match
         if (password !== password2) {
             alert("Passwords do not match!");
             return;
         }
 
-        // Store the username in localStorage (avoid storing passwords)
+        // Store the username in localStorage (avoid storing passwords for security reasons)
         localStorage.setItem("username", username);
+
+        // Optionally, store email in localStorage (if needed)
+        // localStorage.setItem("email", email);
 
         // Redirect to the index page
         window.location.href = "index.html";  // Redirect after form submission

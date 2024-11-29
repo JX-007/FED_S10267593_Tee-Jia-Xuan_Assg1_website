@@ -10,6 +10,7 @@
     <section id="sticky-container">
         <!-- Logo Section -->
         <div class="logo-container">
+            <span id="username-display" style="position: absolute; left: 20px; top: 20px; font-size: 18px; color: #333;"></span>
             <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" style="width: 300px; height: auto;">
         </div>
    
@@ -94,42 +95,18 @@
     </footer>
     <script src="index.js"></script>
     <script>
-        // Wait for the DOM to be fully loaded
+        // Wait for the DOM to load and then display the username if it's stored
         document.addEventListener("DOMContentLoaded", function() {
+            // Get the stored username from localStorage
             const username = localStorage.getItem("username");
 
-            // Get the user info container where the welcome message and logout button will go
-            const userInfoContainer = document.getElementById("user-info");
-
-            // If the user is logged in (username is stored in localStorage), display the username and logout button
+            // If the username exists, display it in the appropriate element
             if (username) {
-                // Create a div for the welcome message
-                const welcomeMessage = document.createElement("div");
-                welcomeMessage.classList.add("welcome-message");
-                welcomeMessage.innerText = `Welcome, ${username}!`;
-                
-                // Create a logout button
-                const logoutButton = document.createElement("button");
-                logoutButton.classList.add("logout-btn");
-                logoutButton.innerText = "Logout";
-                
-                // Add event listener to logout button
-                logoutButton.addEventListener("click", function() {
-                    // Clear the username from localStorage and refresh the page
-                    localStorage.removeItem("username");
-                    window.location.reload();
-                });
-
-                // Append the welcome message and logout button to the user info container
-                userInfoContainer.appendChild(welcomeMessage);
-                userInfoContainer.appendChild(logoutButton);
-
-                // Position the elements in the logo-container
-                const logoContainer = document.querySelector('.logo-container');
-                logoContainer.appendChild(userInfoContainer);  // Add user info to the right side of logo-container
+                const usernameElement = document.getElementById("username-display"); // Assuming you have an element with this ID
+                usernameElement.textContent = `Welcome, ${username}!`;
             }
         });
-        </script>
+    </script>
 </body>
 </html>
 
