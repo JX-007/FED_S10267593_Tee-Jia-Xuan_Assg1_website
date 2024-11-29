@@ -471,6 +471,7 @@ h1 {
     max-width: 600px;
     padding: 40px;
     border-radius: 5%;
+    background-color: #ffffff;
 }
 
 .about-us-content h1 {
@@ -508,6 +509,9 @@ p {
     background-color: transparent;
 }
 
+.team-image {
+    margin-top: 30px;
+}
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
     .about-us-container {

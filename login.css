@@ -512,6 +512,9 @@ h2 {
 /* Input focus */
 .login-box form {
     background-color: white;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 /* Submit button */

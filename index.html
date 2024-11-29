@@ -50,6 +50,8 @@
     </div>
 
     <div class="spacing"></div>
+    <!---->
+
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -91,6 +93,43 @@
         </div>
     </footer>
     <script src="index.js"></script>
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            const username = localStorage.getItem("username");
+
+            // Get the user info container where the welcome message and logout button will go
+            const userInfoContainer = document.getElementById("user-info");
+
+            // If the user is logged in (username is stored in localStorage), display the username and logout button
+            if (username) {
+                // Create a div for the welcome message
+                const welcomeMessage = document.createElement("div");
+                welcomeMessage.classList.add("welcome-message");
+                welcomeMessage.innerText = `Welcome, ${username}!`;
+                
+                // Create a logout button
+                const logoutButton = document.createElement("button");
+                logoutButton.classList.add("logout-btn");
+                logoutButton.innerText = "Logout";
+                
+                // Add event listener to logout button
+                logoutButton.addEventListener("click", function() {
+                    // Clear the username from localStorage and refresh the page
+                    localStorage.removeItem("username");
+                    window.location.reload();
+                });
+
+                // Append the welcome message and logout button to the user info container
+                userInfoContainer.appendChild(welcomeMessage);
+                userInfoContainer.appendChild(logoutButton);
+
+                // Position the elements in the logo-container
+                const logoContainer = document.querySelector('.logo-container');
+                logoContainer.appendChild(userInfoContainer);  // Add user info to the right side of logo-container
+            }
+        });
+        </script>
 </body>
 </html>
 

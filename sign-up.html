@@ -39,7 +39,7 @@
     <div class="signup-container">
         <div class="signup-box">
             <h2>Create Account</h2>
-            <form action="signup-process.php" method="POST">
+            <form id= 'form'action="signup-process.php" method="POST">
                 <div class="input-group">
                     <label for="username">Username *</label>
                     <input type="text" id="username" name="username" required>
@@ -51,6 +51,10 @@
                 <div class="input-group">
                     <label for="password">Password *</label>
                     <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="password2">Confirm Password *</label>
+                    <input type="password" id="password2" name="password2" required>
                 </div>
                 <button type="submit">Create Account</button>
                 <p class="login-link">Have an account? <a href="login.html">Log In</a></p>
@@ -103,5 +107,6 @@
             navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
         }
     </script>
+    <script src="create-account.js"></script>
 </body>
 </html>
