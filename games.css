@@ -1,9 +1,8 @@
-/* General Styles */
+/* Basic reset */
 * {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
     box-sizing: border-box;
 }
 
@@ -27,7 +26,6 @@ h1 {
     display: none;
 }
 
-
 .navbar {
     display: flex;
     justify-content: flex-start; /* Shift the nav buttons to the left */
@@ -39,7 +37,6 @@ h1 {
     width: 100%;
 }
 
-
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -49,7 +46,6 @@ h1 {
     width: auto;
     flex-grow: 1; /* Allow navbar links to take available space */
 }
-
 
 .navbar li {
     margin-right: 15px;
@@ -69,7 +65,6 @@ h1 {
     color: white;
 }
 
-/* Search Bar Styling */
 /* Search bar container */
 .search-bar {
     position: absolute;  /* Make the search bar absolute to the navbar */
@@ -88,7 +83,6 @@ h1 {
     padding: 0;  /* Remove default padding from the form */
 }
 
-
 /* Search input field */
 .search-form input {
     padding: 8px;
@@ -97,7 +91,6 @@ h1 {
     width: 160px;  /* Set the width for the input */
     margin-right: 8px;  /* Add some space between the input and button */
 }
-
 
 /* Search button */
 .search-form button {
@@ -113,132 +106,17 @@ h1 {
     padding: 0;  /* Remove any default padding */
 }
 
-
 /* Icon inside the button */
 .search-form button svg {
     width: 20px;  /* Set icon size */
     height: 20px;
 }
-
 #sticky-container {
     position: sticky;
     top: 0;
     z-index: 10;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Main Content Section */
-body, html {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: block;
-    background-color: #f0f0f0;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
-    width: 100%;
-    padding: 2.5rem;
-    justify-items: center;
-    align-content: center;
-}
-
-/* Adjust grid layout for smaller screens */
-@media (max-width: 1024px) {
-    .container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        padding: 10px 20px;
-        margin: 5px 0;
-    }
-
-    .search-bar {
-        width: 100%;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .search-bar input {
-        width: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-}
-
-.box {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; 
-    background-color: #f5f5f5;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.box:hover {
-    transform: scale(1.05); 
-    
-}
-
-.overlay:hover {
-    background-color: rgba(0, 0, 0, 0.7); 
-}
-
-.image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); 
-    z-index: 1;
-}
-
-.text {
-    position: absolute;
-    top: 10px; 
-    left: 15px;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
-    background-color: transparent;
 }
 
 /* Footer Styles */
@@ -249,7 +127,6 @@ body, html {
     font-size: 1rem;
 }
 
-
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -259,19 +136,16 @@ body, html {
     padding: 0 20px; /* Adjust left/right padding */
 }
 
-
 .footer-links, .footer-social, .footer-newsletter {
     width: 30%;
     min-width: 220px; /* Prevents items from shrinking too much */
 }
-
 
 .footer-links h4, .footer-social h4, .footer-newsletter h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
-
 
 .footer-links ul, .footer-social ul {
     list-style: none;
@@ -281,17 +155,14 @@ body, html {
     margin-bottom: 15px;
 }
 
-
 .footer-links li, .footer-social li {
     margin-bottom: 10px;
 }
-
 
 .footer-links a {
     text-decoration: underline;
     color: white;
 }
-
 
 .footer-social a {
     display: block;
@@ -299,16 +170,13 @@ body, html {
     color: white;
 }
 
-
 .footer-links a:hover, .footer-social a:hover {
     color: #f26722;
 }
 
-
 .footer-social i {
     margin-right: 10px;
 }
-
 
 /* Aligning the Follow Us header and social links */
 .footer-social {
@@ -320,14 +188,12 @@ body, html {
     gap: 10px; /* Controls space between social links */
 }
 
-
 .footer-social h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: left; /* Ensure the heading aligns left */
 }
-
 
 .footer-social ul {
     list-style: none;
@@ -340,21 +206,17 @@ body, html {
     gap: 10px; /* Controls space between social links */
 }
 
-
 .footer-social li {
     margin-bottom: 0; /* Remove extra margin */
 }
-
 
 .footer-newsletter form {
     background-color: transparent;
 }
 
-
 .footer-newsletter p {
     padding-bottom: 15px;
 }
-
 
 .footer-newsletter input[type="email"] {
     padding: 10px;
@@ -362,7 +224,6 @@ body, html {
     margin-right: 10px;
     width: 70%;
 }
-
 
 .footer-newsletter button {
     padding: 10px 20px;
@@ -373,11 +234,9 @@ body, html {
     cursor: pointer;
 }
 
-
 .footer-newsletter button:hover {
     background-color: #c7561d;
 }
-
 
 .footer-bottom {
     display: flex;
@@ -390,26 +249,18 @@ body, html {
     font-size: 0.875rem;
 }
 
-
 .footer-bottom p {
     color: white;
     margin-top: 1rem; /* Reduced margin */
 }
 
-
 .footer-bottom a {
     color: white;
 }
 
-
 .footer-bottom a:hover {
     color: #f26722;
 }
-
-
-
-
-
 
 @media (max-width: 768px) {
     .footer-content {
@@ -417,12 +268,10 @@ body, html {
         text-align: center;
     }
 
-
     .footer-links, .footer-social, .footer-newsletter {
         width: 100%;
         margin-bottom: 20px;
     }
-
 
     .footer-social {
         display: flex;
@@ -430,7 +279,6 @@ body, html {
         align-items: center; /* Center on mobile */
         gap: 10px; /* Gap between links */
     }
-
 
     .footer-newsletter input[type="email"] {
         margin-bottom: 10px;
@@ -441,7 +289,6 @@ body, html {
     }
 }
 
-
 /* Navbar for Mobile */
 @media (max-width: 768px) {
     .navbar {
@@ -450,17 +297,17 @@ body, html {
         padding: 10px;
     }
 
-
     .navbar ul {
         display: none; /* Hide the navbar links by default */
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
     }
-
 
     .navbar li {
         margin: 10px 0;
         width: 100%; /* Ensure the list items span the entire width */
     }
-
 
     .navbar a {
         color: black;
@@ -470,7 +317,6 @@ body, html {
         text-align: left;
         background-color: #868d94; /* Default background color */
     }
-
 
     .navbar a:hover {
         background-color: #43404d; /* Darken background when hovered */
@@ -485,17 +331,16 @@ body, html {
 
 
     .navbar.active ul {
-        display: flex; /* Show the navbar links when the navbar has the 'active' class */
-        flex-direction: column;
-        width: 100%;
+        display: flex; /* Show the navbar links when active */
+        max-width: 45%;
     }
 
     /* Hamburger icon adjustments */
     .navbar .hamburger {
-        display: block; /* Show hamburger on small screens */
+        display: block; /* Show the hamburger on small screens */
         cursor: pointer;
         font-size: 30px;
-        color: #f26722;
+        color: #f26722; /* Set the color of the hamburger */
     }
    
     /* Hover effect for hamburger */
@@ -504,12 +349,10 @@ body, html {
         background-color: #767c82; /* Background color on hover */
     }
 
-
     .navbar.active a:hover {
         background-color: #43404d; /* Darken background when hovered inside active menu */
         color: white;
     }
-
 
     .search-bar {
         position: absolute;
@@ -523,7 +366,6 @@ body, html {
         max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
     }
 
-
     .search-bar input {
         padding: 8px;
         border: 1px solid #ccc;
@@ -534,7 +376,6 @@ body, html {
         max-width: 100%; /* Ensure it doesn't overflow */
         font-size: 1em;  /* Keep text size relative */
     }
-
 
     .search-bar button {
         background-color: #fff;
@@ -558,5 +399,105 @@ body, html {
     .search-bar button svg {
         width: 20px;  /* Set icon size */
         height: 20px;
+    }
+}
+
+/* Box Styling */
+.box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;  /* Aspect ratio of 1:1 */
+    background-color: #f5f5f5;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;  /* Transition effect for hover */
+}
+
+.box:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Overlay Styling */
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0.7);  /* Dark overlay on hover */
+}
+
+/* Image Inside Box */
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);  /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Text Inside Box */
+.text {
+    position: absolute;
+    top: 10px; 
+    left: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    background-color: transparent;
+}
+
+/* Main Content Section - Games Container */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal-width columns on larger screens */
+    gap: 5rem;  /* Spacing between grid items */
+    width: 100%;
+    padding: 2.5rem;
+    justify-items: center;
+    align-content: center;
+}
+
+/* Adjust grid layout for smaller screens */
+@media (max-width: 1024px) {
+    .games-container {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns on medium screens */
+    }
+
+    .box:hover {
+        transform: scale(1.05);  /* Hover effect */
+    }
+}
+
+@media (max-width: 768px) {
+    .games-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
+    }
+
+    .box:hover {
+        transform: scale(1.05);  /* Hover effect */
+    }
+}
+
+@media (max-width: 480px) {
+    .games-container {
+        grid-template-columns: 1fr;  /* 1 column on very small screens */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .box:hover {
+        transform: scale(1.05);  /* Hover effect */
     }
 }
