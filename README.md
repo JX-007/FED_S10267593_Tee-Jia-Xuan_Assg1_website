@@ -30,6 +30,7 @@ Form shrinks when the screen size has become narrower.
 Credits:
 Content
 - The text for index.html featured games section was copied from MetaCritic Website
+- The text for game-info.html article was copied from GameRadar+ Website
 Media
 - The photos used in this site were obtained from GameRadar+ Website & Google
 Code
