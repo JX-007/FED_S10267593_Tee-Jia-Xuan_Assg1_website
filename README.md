@@ -1,28 +1,33 @@
 # FED_S10267593_Tee-Jia-Xuan_Assg1_website
+FED Assignment 1 - GameRadar+ Website Revamp
+Project Description: For this project, I have taken pages out of GameRadar+'s website that I think the interface can be improved and created pages that I think was lacking from its current state. This is to make it more aesthetically pleasing and include functions that are missing for a better user experience.
 
-What are the user audience intent and purpose when utilising this website?
+Design Process: While working on my previous game website, I felt that it was too out of reach, but I still wanted to keep it game related. So I decided to improve websites that showcase games much like popular show websites that provide information about movies or series, but with games. While researching, I stumbled onto GameRadar+. A website that provides gaming information, tips and news in the form of articles. As I looked through it, I was not satisfied by their current website layout and the lack of a sign in/ log in page gave me the idea to focus on this website. As this website is for people who are interested in games, mostly teenagers and adults, I wanted to make this website more reactive to interactions so that it can capture the attention of these target users in a more pointed manner. Other than reorganising the layout and interactivity, I also wanted to create the pages missing for logging in and creating an account.
 
-Target Audience - Gameradar+ primarily targets gaming enthusiasts—both teenagers and adults—who are looking for the latest news, updates, reviews, and insights into the gaming world. The audience includes:
-- Casual gamers who want to stay informed about the latest game releases, patches, and events.
-- Hardcore gamers who seek in-depth coverage of specific game genres, gameplay mechanics, or esports-related content.
-- Game developers and industry professionals interested in trends, technological innovations, and community feedback.
-- Gaming influencers and streamers who rely on up-to-date news to fuel their content creation.
+Features
+- Dropdown bar & Hamburger button - Available on mobile to save space instead of using a navigation bar. There was an implementation of this feature on the actual GameRadar+ (mobile screen) but I felt that the animation for it (the hamburger icon flips from horizontal to vertical when active) was silly and the way that it was organised was unsatisfactory and odd looking.
 
-Purpose - The main purpose of Gameradar+ is to serve as a comprehensive platform for gaming news, reviews, and updates. It aims to:
-- Keep users informed about the latest happenings in the gaming industry, including new game releases, major updates, upcoming events, and trends.
-- Provide reviews and analysis of both new and classic games, helping gamers make informed decisions about which games to play.
-- Engage with the gaming community, offering a space for people to discuss, share opinions, and stay connected with gaming culture.
+- Login & Sign Up page - Also known as Subscribe in the actual page, is not available for unknown reasons. Therefore, I made one in my snippet of a website referencing them. I kept the colours of their branding in mind while creating this two pages.
 
-Who the website is catering for? What value is provided or beneficial to users from this website?
+- Footer - Rather than including their social links right at the navgation bar as in the actual website, I think it would've been more tasteful to leave it in the footer. Hence why I reogranised their footer.
 
-Gameradar+ caters to the interests and needs of the gaming community by providing:
-- Gaming News: Users can access breaking news, announcements, and rumors related to the gaming world.
-- Game Reviews: In-depth evaluations of games across various platforms, offering insights into gameplay, story, graphics, and performance.
-- Previews and Features: Exclusive content such as game previews, behind-the-scenes looks, and feature articles about upcoming titles and gaming trends.
-- Esports Coverage: Information on tournaments, competitive gaming, and the latest trends in the esports scene.
-- Community Interaction: Space for users to comment, share opinions, and engage in discussions about gaming news and trends.
+Testing Process:
+Log In form:
+Go to the "Log In" page
+Try to submit the empty form and verify that an error message about the required fields appears
+Form shrinks when the screen size has become narrower.
 
-References & Tools Used:
-- Game Images and Logo Image from GameRadar+ Website
-- Game Images screenshots from the Internet
-- Examples generated from ChatGPT 
+Sign Up form:
+Go to the "Sign Up" page
+Try to submit the empty form and verify that an error message about the required fields appears
+Try to input invalid values for email and verify that an error message about the required fields appears
+Try to input different password into Confirm password to verify that an error alert message about the mismatching passwords appears
+Form shrinks when the screen size has become narrower.
+
+Credits:
+Content
+- The text for index.html featured games section was copied from MetaCritic Website
+Media
+- The photos used in this site were obtained from GameRadar+ Website & Google
+Code
+- Example code generated using ChatGPT
