@@ -12,6 +12,7 @@
         <div class="logo-container">
             <span id="username-display" style="position: absolute; left: 30px; top: 30px; font-size: 18px; color: #ffffff; "></span>
             <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" style="width: 300px; height: auto;">
+            <button id="logoutButton" onclick="logout()" style="display: none; position: absolute; right: 30px; top: 30px; background-color: #ff4747; color: white; border: none; padding: 10px; cursor: pointer;">Logout</button>
         </div>
    
         <!-- Navigation Bar Section -->
@@ -21,7 +22,6 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="games.html">Games</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
@@ -89,24 +89,7 @@
             <p>&copy; 2024 GamesRadar+. All rights reserved. | <a href="https://futureplc.com/privacy-policy/">Privacy Policy</a> | <a href="https://futureplc.com/terms-conditions/">Terms & Conditions</a></p>
         </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
-        }
-
-        // Wait for the DOM to load and then display the username if it's stored
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get the stored username from localStorage
-            const username = localStorage.getItem("username");
-
-            // If the username exists, display it in the appropriate element
-            if (username) {
-                const usernameElement = document.getElementById("username-display"); // Assuming you have an element with this ID
-                usernameElement.textContent = `Welcome, ${username}!`;
-            }
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
 

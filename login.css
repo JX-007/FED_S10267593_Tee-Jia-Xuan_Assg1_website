@@ -417,7 +417,6 @@ h1 {
         max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
     }
 
-
     .search-bar input {
         padding: 8px;
         border: 1px solid #ccc;

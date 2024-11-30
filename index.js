@@ -45,5 +45,46 @@ function toggleMenu() {
     navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
 }
 
+// Wait for the DOM to load and then display the username if it's stored
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the stored username from localStorage
+    const username = localStorage.getItem("username");
 
+    // If the username exists, display it in the appropriate element
+    if (username) {
+        const usernameElement = document.getElementById("username-display"); // Assuming you have an element with this ID
+        usernameElement.textContent = `Welcome, ${username}!`;
+    }
+});
 
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
+}
+
+// Wait for the DOM to load and then display the username if it's stored
+document.addEventListener("DOMContentLoaded", function() {
+// Get the stored username from localStorage
+const username = localStorage.getItem("username");
+
+// If the username exists, display it in the appropriate element and show the logout button
+if (username) {
+    const usernameElement = document.getElementById("username-display");
+    usernameElement.textContent = `Welcome, ${username}!`;
+
+    // Show the logout button
+    document.getElementById("logoutButton").style.display = "inline-block";
+}});
+
+// Logout function to clear username and hide logout button
+function logout() {
+    // Clear the stored username from localStorage
+    localStorage.removeItem("username");
+
+    // Remove the displayed username from the page
+    const usernameElement = document.getElementById("username-display");
+    usernameElement.textContent = '';
+
+    // Hide the logout button
+    document.getElementById("logoutButton").style.display = "none";
+}

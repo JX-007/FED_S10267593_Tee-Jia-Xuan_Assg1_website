@@ -23,3 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "index.html";  // Redirect after form submission
     });
 });
+
+// Logout function to remove the username and hide the logout button
+function logout() {
+    localStorage.removeItem("username"); // Clear the username from localStorage
+    const usernameElement = document.getElementById("username-display");
+    usernameElement.textContent = ""; // Clear the displayed username
+
+    // Hide the logout button again
+    document.getElementById("logoutButton").style.display = "none";
+}
