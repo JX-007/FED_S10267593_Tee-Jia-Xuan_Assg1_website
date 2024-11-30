@@ -46,22 +46,4 @@ function toggleMenu() {
 }
 
 
-/*
-// Wait for the DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if the username is stored in localStorage
-    const username = localStorage.getItem("username");
 
-    // If there is a username, display it in the top-left corner
-    if (username) {
-        const usernameDisplay = document.createElement("div");
-        usernameDisplay.style.position = "absolute";
-        usernameDisplay.style.top = "10px";
-        usernameDisplay.style.left = "10px";
-        usernameDisplay.style.fontSize = "18px";
-        usernameDisplay.style.fontWeight = "bold";
-        usernameDisplay.innerText = `Welcome, ${username}!`;
-
-        document.body.appendChild(usernameDisplay);
-    }
-});*/
