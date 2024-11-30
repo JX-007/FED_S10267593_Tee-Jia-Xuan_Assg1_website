@@ -431,9 +431,8 @@ h1 {
     justify-content: center;  /* Center images horizontally */
     align-items: center;  
     z-index: 1; /* Set a lower z-index than the navbar */
-    margin-top: 180px; /* Add some space below the fixed navbar */
+    margin-top: 135px; /* Add some space below the fixed navbar */
 }
-
 
 .slider img {
     display: none;
