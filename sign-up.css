@@ -354,6 +354,11 @@ h2 {
 
 
 @media (max-width: 768px) {
+
+    #username-display {
+        display: none;
+    }
+    
     .footer-content {
         flex-direction: column;
         text-align: center;

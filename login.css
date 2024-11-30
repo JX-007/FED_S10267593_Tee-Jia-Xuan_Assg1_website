@@ -429,6 +429,9 @@ h1 {
         font-size: 1em;  /* Keep text size relative */
     }
 
+    #username-display {
+        display: none;
+    }
 
     .search-bar button {
         background-color: #fff;

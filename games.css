@@ -497,6 +497,10 @@ h1 {
         grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
     }
 
+    #username-display {
+        display: none;
+    }
+
     .box:hover {
         transform: scale(1.05);  /* Hover effect */
     }

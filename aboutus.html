@@ -10,6 +10,7 @@
     <section id="sticky-container">
         <!-- Logo Section -->
         <div class="logo-container">
+            <span id="username-display" style="position: absolute; left: 30px; top: 30px; font-size: 18px; color: #ffffff; "></span>
             <img src="GameRadar-Pictures/game-radar-logo.png" alt="Game Radar Logo" style="width: 300px; height: auto;">
         </div>
    
@@ -93,6 +94,18 @@
             const navbar = document.querySelector('.navbar');
             navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
         }
+
+        // Wait for the DOM to load and then display the username if it's stored
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the stored username from localStorage
+            const username = localStorage.getItem("username");
+
+            // If the username exists, display it in the appropriate element
+            if (username) {
+                const usernameElement = document.getElementById("username-display"); // Assuming you have an element with this ID
+                usernameElement.textContent = `Welcome, ${username}!`;
+            }
+        });
     </script>
 </body>
 </html>

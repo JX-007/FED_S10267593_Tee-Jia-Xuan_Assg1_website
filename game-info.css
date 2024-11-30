@@ -335,6 +335,11 @@ h1 {
 
 /* Navbar for Mobile */
 @media (max-width: 768px) {
+
+    #username-display {
+        display: none;
+    }
+
     .navbar {
         flex-direction: column; /* Align links vertically on small screens */
         align-items: flex-start;
