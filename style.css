@@ -6,12 +6,10 @@
     box-sizing: border-box;
 }
 
-
 /* Header Section */
 h1 {
     text-align: center;
 }
-
 
 .logo-container {
     width: 100%;
@@ -23,12 +21,10 @@ h1 {
     box-sizing: border-box;
 }
 
-
 /* Initially hide the hamburger icon by default (for larger screens) */
 .navbar .hamburger {
     display: none;
 }
-
 
 .navbar {
     display: flex;
@@ -42,7 +38,6 @@ h1 {
     z-index: 1000;
 }
 
-
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -53,11 +48,9 @@ h1 {
     flex-grow: 1; /* Allow navbar links to take available space */
 }
 
-
 .navbar li {
     margin-right: 15px;
 }
-
 
 .navbar a {
     color: black;
@@ -68,12 +61,10 @@ h1 {
     background-color: #868d94;
 }
 
-
 .navbar a:hover {
     background-color: #43404d;
     color: white;
 }
-
 
 /* Search bar container */
 .search-bar {
@@ -85,14 +76,12 @@ h1 {
     align-items: center;  /* Vertically center the items */
 }
 
-
 /* Search form */
 .search-form {
     display: flex;  /* Use flexbox to align input and button horizontally */
     margin: 0;  /* Remove default margin from the form */
     padding: 0;  /* Remove default padding from the form */
 }
-
 
 /* Search input field */
 .search-form input {
@@ -102,7 +91,6 @@ h1 {
     width: 160px;  /* Set the width for the input */
     margin-right: 8px;  /* Add some space between the input and button */
 }
-
 
 /* Search button */
 .search-form button {
@@ -117,7 +105,6 @@ h1 {
     cursor: pointer;
     padding: 0;  /* Remove any default padding */
 }
-
 
 /* Icon inside the button */
 .search-form button svg {
@@ -135,7 +122,6 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Footer Styles */
 .site-footer {
     background-color: #232128;
@@ -143,7 +129,6 @@ h1 {
     padding: 40px 0;
     font-size: 1rem;
 }
-
 
 .footer-content {
     display: flex;
@@ -154,19 +139,16 @@ h1 {
     padding: 0 20px; /* Adjust left/right padding */
 }
 
-
 .footer-links, .footer-social, .footer-newsletter {
     width: 30%;
     min-width: 220px; /* Prevents items from shrinking too much */
 }
-
 
 .footer-links h4, .footer-social h4, .footer-newsletter h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
-
 
 .footer-links ul, .footer-social ul {
     list-style: none;
@@ -176,17 +158,14 @@ h1 {
     margin-bottom: 15px;
 }
 
-
 .footer-links li, .footer-social li {
     margin-bottom: 10px;
 }
-
 
 .footer-links a {
     text-decoration: underline;
     color: white;
 }
-
 
 .footer-social a {
     display: block;
@@ -194,16 +173,13 @@ h1 {
     color: white;
 }
 
-
 .footer-links a:hover, .footer-social a:hover {
     color: #f26722;
 }
 
-
 .footer-social i {
     margin-right: 10px;
 }
-
 
 /* Aligning the Follow Us header and social links */
 .footer-social {
@@ -215,14 +191,12 @@ h1 {
     gap: 10px; /* Controls space between social links */
 }
 
-
 .footer-social h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: left; /* Ensure the heading aligns left */
 }
-
 
 .footer-social ul {
     list-style: none;
@@ -235,21 +209,17 @@ h1 {
     gap: 10px; /* Controls space between social links */
 }
 
-
 .footer-social li {
     margin-bottom: 0; /* Remove extra margin */
 }
-
 
 .footer-newsletter form {
     background-color: transparent;
 }
 
-
 .footer-newsletter p {
     padding-bottom: 15px;
 }
-
 
 .footer-newsletter input[type="email"] {
     padding: 10px;
@@ -257,7 +227,6 @@ h1 {
     margin-right: 10px;
     width: 70%;
 }
-
 
 .footer-newsletter button {
     padding: 10px 20px;
@@ -268,11 +237,9 @@ h1 {
     cursor: pointer;
 }
 
-
 .footer-newsletter button:hover {
     background-color: #c7561d;
 }
-
 
 .footer-bottom {
     display: flex;
@@ -285,26 +252,18 @@ h1 {
     font-size: 0.875rem;
 }
 
-
 .footer-bottom p {
     color: white;
     margin-top: 1rem; /* Reduced margin */
 }
 
-
 .footer-bottom a {
     color: white;
 }
 
-
 .footer-bottom a:hover {
     color: #f26722;
 }
-
-
-
-
-
 
 @media (max-width: 768px) {
     .footer-content {
