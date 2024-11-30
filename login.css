@@ -473,12 +473,14 @@ body {
 }
 
 .login-box {
-    width: 300px;
+    width: 100%;  /* Allow full width on smaller screens */
+    max-width: 400px; /* Set a max-width for the box */
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: white;
+    background-color: white; /* Ensuring white background */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;  /* Allow it to grow based on available space */
 }
 
 h2 {
