@@ -470,7 +470,7 @@ h1 {
     flex-direction: column;
 }
 
-.article-title {
+h1 {
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
