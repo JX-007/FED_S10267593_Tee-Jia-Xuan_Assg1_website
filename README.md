@@ -11,6 +11,9 @@ Features
 
 - Footer - Rather than including their social links right at the navgation bar as in the actual website, I think it would've been more tasteful to leave it in the footer. Hence why I reogranised their footer.
 
+Future Features
+- A more organised contact us page
+
 Testing Process:
 Log In form:
 Go to the "Log In" page
