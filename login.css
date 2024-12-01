@@ -6,12 +6,10 @@
     box-sizing: border-box;
 }
 
-
 /* Header Section */
 h1 {
     text-align: center;
 }
-
 
 .logo-container {
     width: 100%;
@@ -23,12 +21,10 @@ h1 {
     box-sizing: border-box;
 }
 
-
 /* Initially hide the hamburger icon by default (for larger screens) */
 .navbar .hamburger {
     display: none;
 }
-
 
 .navbar {
     display: flex;
@@ -41,7 +37,6 @@ h1 {
     width: 100%;
 }
 
-
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -52,11 +47,9 @@ h1 {
     flex-grow: 1; /* Allow navbar links to take available space */
 }
 
-
 .navbar li {
     margin-right: 15px;
 }
-
 
 .navbar a {
     color: black;
@@ -67,12 +60,10 @@ h1 {
     background-color: #868d94;
 }
 
-
 .navbar a:hover {
     background-color: #43404d;
     color: white;
 }
-
 
 /* Search bar container */
 .search-bar {
@@ -84,14 +75,12 @@ h1 {
     align-items: center;  /* Vertically center the items */
 }
 
-
 /* Search form */
 .search-form {
     display: flex;  /* Use flexbox to align input and button horizontally */
     margin: 0;  /* Remove default margin from the form */
     padding: 0;  /* Remove default padding from the form */
 }
-
 
 /* Search input field */
 .search-form input {
@@ -101,7 +90,6 @@ h1 {
     width: 160px;  /* Set the width for the input */
     margin-right: 8px;  /* Add some space between the input and button */
 }
-
 
 /* Search button */
 .search-form button {
@@ -117,12 +105,12 @@ h1 {
     padding: 0;  /* Remove any default padding */
 }
 
-
 /* Icon inside the button */
 .search-form button svg {
     width: 20px;  /* Set icon size */
     height: 20px;
 }
+
 #sticky-container {
     position: sticky;
     top: 0;
@@ -131,7 +119,6 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Footer Styles */
 .site-footer {
     background-color: #232128;
@@ -139,7 +126,6 @@ h1 {
     padding: 40px 0;
     font-size: 1rem;
 }
-
 
 .footer-content {
     display: flex;
@@ -150,19 +136,16 @@ h1 {
     padding: 0 20px; /* Adjust left/right padding */
 }
 
-
 .footer-links, .footer-social, .footer-newsletter {
     width: 30%;
     min-width: 220px; /* Prevents items from shrinking too much */
 }
-
 
 .footer-links h4, .footer-social h4, .footer-newsletter h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
-
 
 .footer-links ul, .footer-social ul {
     list-style: none;
@@ -172,17 +155,14 @@ h1 {
     margin-bottom: 15px;
 }
 
-
 .footer-links li, .footer-social li {
     margin-bottom: 10px;
 }
-
 
 .footer-links a {
     text-decoration: underline;
     color: white;
 }
-
 
 .footer-social a {
     display: block;
@@ -190,16 +170,13 @@ h1 {
     color: white;
 }
 
-
 .footer-links a:hover, .footer-social a:hover {
     color: #f26722;
 }
 
-
 .footer-social i {
     margin-right: 10px;
 }
-
 
 /* Aligning the Follow Us header and social links */
 .footer-social {
@@ -211,14 +188,12 @@ h1 {
     gap: 10px; /* Controls space between social links */
 }
 
-
 .footer-social h4 {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 15px;
     text-align: left; /* Ensure the heading aligns left */
 }
-
 
 .footer-social ul {
     list-style: none;
@@ -231,21 +206,17 @@ h1 {
     gap: 10px; /* Controls space between social links */
 }
 
-
 .footer-social li {
     margin-bottom: 0; /* Remove extra margin */
 }
-
 
 .footer-newsletter form {
     background-color: transparent;
 }
 
-
 .footer-newsletter p {
     padding-bottom: 15px;
 }
-
 
 .footer-newsletter input[type="email"] {
     padding: 10px;
@@ -253,7 +224,6 @@ h1 {
     margin-right: 10px;
     width: 70%;
 }
-
 
 .footer-newsletter button {
     padding: 10px 20px;
@@ -264,11 +234,9 @@ h1 {
     cursor: pointer;
 }
 
-
 .footer-newsletter button:hover {
     background-color: #c7561d;
 }
-
 
 .footer-bottom {
     display: flex;
@@ -281,180 +249,17 @@ h1 {
     font-size: 0.875rem;
 }
 
-
 .footer-bottom p {
     color: white;
     margin-top: 1rem; /* Reduced margin */
 }
 
-
 .footer-bottom a {
     color: white;
 }
 
-
 .footer-bottom a:hover {
     color: #f26722;
-}
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-
-    .footer-links, .footer-social, .footer-newsletter {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-
-    .footer-social {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center on mobile */
-        gap: 10px; /* Gap between links */
-    }
-
-
-    .footer-newsletter input[type="email"] {
-        margin-bottom: 10px;
-        width: 80%;
-    }
-    .footer-bottom p {
-        margin: 8px;
-    }
-}
-
-
-/* Navbar for Mobile */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Align links vertically on small screens */
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-
-    .navbar ul {
-        display: none; /* Hide the navbar links by default */
-        width: 100%;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-
-    .navbar li {
-        margin: 10px 0;
-        width: 100%; /* Ensure the list items span the entire width */
-    }
-
-
-    .navbar a {
-        color: black;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        text-align: left;
-        background-color: #868d94; /* Default background color */
-    }
-
-
-    .navbar a:hover {
-        background-color: #43404d; /* Darken background when hovered */
-        color: white;
-    }
-   
-    /* Ensure the hover effect works when the hamburger menu is active */
-    .navbar.active a:hover {
-        background-color: #43404d; /* Darken background when hovered inside active menu */
-        color: white;
-    }
-
-
-    .navbar.active ul {
-        display: flex; /* Show the navbar links when active */
-        max-width: 45%;
-    }
-
-
-    /* Hamburger icon adjustments */
-    .navbar .hamburger {
-        display: block; /* Show the hamburger on small screens */
-        cursor: pointer;
-        font-size: 30px;
-        color: #f26722; /* Set the color of the hamburger */
-    }
-   
-    /* Hover effect for hamburger */
-    .navbar .hamburger:hover {
-        color: #c7561d; /* Change color on hover */
-        background-color: #767c82; /* Background color on hover */
-    }
-
-
-    .navbar.active a:hover {
-        background-color: #43404d; /* Darken background when hovered inside active menu */
-        color: white;
-    }
-
-
-    .search-bar {
-        position: absolute;
-        right: 20px;  /* Keep it 20px from the right edge */
-        top: 50%;
-        transform: translateY(-50%); /* Center vertically */
-        display: flex;  /* Keep elements aligned horizontally */
-        align-items: center;
-        justify-content: flex-start;  /* Align horizontally */
-        width: 70vw; /* Set the width of the search bar as a percentage of the viewport width */
-        max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
-    }
-
-    .search-bar input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        flex-grow: 1;  /* Allow the input to take up available space */
-        margin-right: 8px;  /* Add space between input and button */
-        width: 100%;  /* Full width relative to the container */
-        max-width: 100%; /* Ensure it doesn't overflow */
-        font-size: 1em;  /* Keep text size relative */
-    }
-
-    #username-display {
-        display: none;
-    }
-
-    .search-bar button {
-        background-color: #fff;
-        border: 1px solid black;
-        border-radius: 4px;
-        width: 12vw;  /* Button width based on viewport width */
-        height: 12vw;  /* Button height based on viewport width */
-        min-width: 30px;  /* Prevent it from shrinking too much */
-        min-height: 30px;  /* Prevent it from shrinking too much */
-        max-width: 40px;  /* Max button size */
-        max-height: 40px;  /* Max button size */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        padding: 0;  /* Remove any default padding */
-    }
-
-
-    /* Icon inside the button */
-    .search-bar button svg {
-        width: 20px;  /* Set icon size */
-        height: 20px;
-    }
 }
 
 /* Login Section */
@@ -553,4 +358,144 @@ h2 {
 
 .signup-link a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links, .footer-social, .footer-newsletter {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center on mobile */
+        gap: 10px; /* Gap between links */
+    }
+
+    .footer-newsletter input[type="email"] {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    .footer-bottom p {
+        margin: 8px;
+    }
+
+    .navbar {
+        flex-direction: column; /* Align links vertically on small screens */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        display: none; /* Hide the navbar links by default */
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        width: 100%; /* Ensure the list items span the entire width */
+    }
+
+    .navbar a {
+        color: black;
+        text-decoration: none;
+        padding: 15px;
+        display: block;
+        text-align: left;
+        background-color: #868d94; /* Default background color */
+    }
+
+    .navbar a:hover {
+        background-color: #43404d; /* Darken background when hovered */
+        color: white;
+    }
+   
+    /* Ensure the hover effect works when the hamburger menu is active */
+    .navbar.active a:hover {
+        background-color: #43404d; /* Darken background when hovered inside active menu */
+        color: white;
+    }
+
+    .navbar.active ul {
+        display: flex; /* Show the navbar links when active */
+        max-width: 45%;
+    }
+
+    /* Hamburger icon adjustments */
+    .navbar .hamburger {
+        display: block; /* Show the hamburger on small screens */
+        cursor: pointer;
+        font-size: 30px;
+        color: #f26722; /* Set the color of the hamburger */
+    }
+   
+    /* Hover effect for hamburger */
+    .navbar .hamburger:hover {
+        color: #c7561d; /* Change color on hover */
+        background-color: #767c82; /* Background color on hover */
+    }
+
+
+    .navbar.active a:hover {
+        background-color: #43404d; /* Darken background when hovered inside active menu */
+        color: white;
+    }
+
+    .search-bar {
+        position: absolute;
+        right: 20px;  /* Keep it 20px from the right edge */
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
+        display: flex;  /* Keep elements aligned horizontally */
+        align-items: center;
+        justify-content: flex-start;  /* Align horizontally */
+        width: 70vw; /* Set the width of the search bar as a percentage of the viewport width */
+        max-width: 300px;  /* Limit the max width to prevent the search bar from becoming too large */
+    }
+
+    .search-bar input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex-grow: 1;  /* Allow the input to take up available space */
+        margin-right: 8px;  /* Add space between input and button */
+        width: 100%;  /* Full width relative to the container */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        font-size: 1em;  /* Keep text size relative */
+    }
+
+    #username-display {
+        display: none;
+    }
+
+    .search-bar button {
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 12vw;  /* Button width based on viewport width */
+        height: 12vw;  /* Button height based on viewport width */
+        min-width: 30px;  /* Prevent it from shrinking too much */
+        min-height: 30px;  /* Prevent it from shrinking too much */
+        max-width: 40px;  /* Max button size */
+        max-height: 40px;  /* Max button size */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 0;  /* Remove any default padding */
+    }
+
+    /* Icon inside the button */
+    .search-bar button svg {
+        width: 20px;  /* Set icon size */
+        height: 20px;
+    }
 }

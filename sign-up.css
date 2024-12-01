@@ -111,7 +111,6 @@ h1 {
     height: 20px;
 }
 
-
 /* Sign-Up Box */
 body {
     font-family: Arial, sans-serif;
@@ -352,8 +351,6 @@ h2 {
     color: #f26722;
 }
 
-
-
 @media (max-width: 768px) {
 
     #username-display {
@@ -384,10 +381,7 @@ h2 {
     .footer-bottom p {
         margin: 8px;
     }
-}
 
-/* Navbar for Mobile */
-@media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Align links vertically on small screens */
         align-items: flex-start;
