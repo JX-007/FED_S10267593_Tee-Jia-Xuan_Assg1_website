@@ -93,28 +93,6 @@
             <p>&copy; 2024 GamesRadar+. All rights reserved. | <a href="https://futureplc.com/privacy-policy/">Privacy Policy</a> | <a href="https://futureplc.com/terms-conditions/">Terms & Conditions</a></p>
         </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
-        }
-    </script>
-<script>
-        // Wait for the DOM to load and then display the username if it's stored
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get the stored username from localStorage
-            const username = localStorage.getItem("username");
-
-            // If the username exists, display it in the appropriate element and show the logout button
-            if (username) {
-                const usernameElement = document.getElementById("username-display");
-                usernameElement.textContent = `Welcome, ${username}!`;
-
-                // Show the logout button
-                document.getElementById("logoutButton").style.display = "inline-block";
-            }
-        });
-    </script>
-    <script src="login.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
