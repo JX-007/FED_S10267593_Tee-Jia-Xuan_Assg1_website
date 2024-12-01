@@ -403,7 +403,6 @@ img.displaySlide {
 }
 
 /* Media Queries for responsive design */
-
 /* Tablet and small screen (between 600px and 900px) */
 @media (max-width: 900px) {
     .game-cards {
