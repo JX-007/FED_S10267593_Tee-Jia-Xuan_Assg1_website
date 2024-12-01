@@ -1,3 +1,4 @@
+// Slider
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
 let intervalId = null;
@@ -40,6 +41,7 @@ function nextSlide() {
     showSlide(slideIndex);
 }
 
+// Navigation Bar
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('active'); // Toggle 'active' class to show/hide menu
